@@ -28,25 +28,30 @@ const Home = (props) => {
             <DataProvider
               renderSuccess={(Anfiteatro_Romano) => (
                 <>
-                  <div className="home-container01">
-                    <Link href="/anfiteatro-romano">
-                      <a className="home-link">
-                        <div className="home-container02">
-                          <h2 className="heading2-home">
-                            {Anfiteatro_Romano?.name}
-                          </h2>
-                          <span>Scopri di più</span>
-                        </div>
-                      </a>
-                    </Link>
-                    <div className="home-container03">
-                      <img
-                        alt="image"
-                        src={Anfiteatro_Romano?.primaryImage?.url}
-                        className="home-image"
-                      />
+                  <animate-on-reveal animation="fadeIn">
+                    <div
+                      data-thq-animate-on-reveal="true"
+                      className="row-location"
+                    >
+                      <Link href="/anfiteatro-romano">
+                        <a>
+                          <div className="home-container02 location-title-box">
+                            <h2 className="heading2-home">
+                              {Anfiteatro_Romano?.name}
+                            </h2>
+                            <span>Scopri di più</span>
+                          </div>
+                        </a>
+                      </Link>
+                      <div className="home-container03">
+                        <img
+                          alt="image"
+                          src={Anfiteatro_Romano?.primaryImage?.url}
+                          className="home-image"
+                        />
+                      </div>
                     </div>
-                  </div>
+                  </animate-on-reveal>
                 </>
               )}
               initialData={props.anfiteatroRomanoProp}
@@ -56,9 +61,9 @@ const Home = (props) => {
             <DataProvider
               renderSuccess={(Torre_dellelefante) => (
                 <>
-                  <div className="home-container04">
+                  <div className="home-container04 row-location">
                     <Link href="/torre-dell-elefante">
-                      <a className="home-link1">
+                      <a>
                         <div className="home-container05">
                           <img
                             alt="image"
@@ -69,8 +74,8 @@ const Home = (props) => {
                       </a>
                     </Link>
                     <Link href="/torre-dell-elefante">
-                      <a className="home-link2">
-                        <div className="home-container06">
+                      <a>
+                        <div className="home-container06 location-title-box">
                           <h2 className="home-text02 heading2-home">
                             {Torre_dellelefante?.name}
                           </h2>
@@ -88,10 +93,10 @@ const Home = (props) => {
             <DataProvider
               renderSuccess={(Cripta) => (
                 <>
-                  <div className="home-container07">
+                  <div className="home-container07 row-location">
                     <Link href="/cripta-di-santa-restituta">
-                      <a className="home-link3">
-                        <div className="home-container08">
+                      <a>
+                        <div className="home-container08 location-title-box">
                           <h2 className="heading2-home">{Cripta?.name}</h2>
                           <span>Scopri di più</span>
                         </div>
@@ -114,9 +119,9 @@ const Home = (props) => {
             <DataProvider
               renderSuccess={(Bastione) => (
                 <>
-                  <div className="home-container10">
+                  <div className="home-container10 row-location">
                     <Link href="/bastione">
-                      <a className="home-link4">
+                      <a>
                         <div className="home-container11">
                           <img
                             alt="image"
@@ -127,8 +132,8 @@ const Home = (props) => {
                       </a>
                     </Link>
                     <Link href="/bastione">
-                      <a className="home-link5">
-                        <div className="home-container12">
+                      <a>
+                        <div className="home-container12 location-title-box">
                           <h2 className="home-text06 heading2-home">
                             {Bastione?.name}
                           </h2>
@@ -146,10 +151,10 @@ const Home = (props) => {
             <DataProvider
               renderSuccess={(Grotta) => (
                 <>
-                  <div className="home-container13">
+                  <div className="home-container13 row-location">
                     <Link href="/grotta-della-vipera">
-                      <a className="home-link6">
-                        <div className="home-container14">
+                      <a>
+                        <div className="home-container14 location-title-box">
                           <h2 className="heading2-home">{Grotta?.name}</h2>
                           <span>Scopri di più</span>
                         </div>
@@ -184,39 +189,9 @@ const Home = (props) => {
           }
           .home-block {
             flex: 0 0 auto;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-          }
-          .home-container01 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 80vh;
-            display: flex;
-            align-items: flex-start;
-            padding-left: var(--dl-space-space-fiveunits);
-            animation-name: fadeInLeft;
-            animation-delay: 0s;
-            animation-duration: 300ms;
-            animation-direction: normal;
-            animation-iteration-count: 1;
-            animation-timing-function: ease;
-          }
-          .home-link {
-            display: contents;
           }
           .home-container02 {
-            flex: 0 0 auto;
-            width: 40%;
-            height: 100%;
-            display: flex;
-            padding: var(--dl-space-space-twounits);
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: space-between;
-            text-decoration: none;
-            background-color: #b4ccac;
+            background: #b4ccac;
           }
           .home-container03 {
             flex: 0 0 auto;
@@ -233,24 +208,6 @@ const Home = (props) => {
             width: 100%;
             height: 100%;
             object-fit: cover;
-          }
-          .home-container04 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 80vh;
-            display: flex;
-            align-items: flex-start;
-            padding-left: 0px;
-            padding-right: var(--dl-space-space-fiveunits);
-            animation-name: fadeInRight;
-            animation-delay: 0s;
-            animation-duration: 300ms;
-            animation-direction: normal;
-            animation-iteration-count: 1;
-            animation-timing-function: ease;
-          }
-          .home-link1 {
-            display: contents;
           }
           .home-container05 {
             flex: 0 0 auto;
@@ -269,20 +226,7 @@ const Home = (props) => {
             height: 100%;
             object-fit: cover;
           }
-          .home-link2 {
-            display: contents;
-          }
           .home-container06 {
-            flex: 0 0 auto;
-            width: 40%;
-            height: 100%;
-            display: flex;
-            padding: var(--dl-space-space-twounits);
-            align-items: flex-start;
-            padding-top: 32px;
-            flex-direction: column;
-            justify-content: space-between;
-            text-decoration: none;
             background-color: #78b9e5;
           }
           .home-text02 {
@@ -290,27 +234,7 @@ const Home = (props) => {
             font-family: 'Inria Sans';
             font-weight: 700;
           }
-          .home-container07 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 80vh;
-            display: flex;
-            align-items: flex-start;
-            padding-left: var(--dl-space-space-fiveunits);
-          }
-          .home-link3 {
-            display: contents;
-          }
           .home-container08 {
-            flex: 0 0 auto;
-            width: 40%;
-            height: 100%;
-            display: flex;
-            padding: var(--dl-space-space-twounits);
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: space-between;
-            text-decoration: none;
             background-color: #b3aaba;
           }
           .home-container09 {
@@ -329,18 +253,6 @@ const Home = (props) => {
             height: 100%;
             object-fit: cover;
           }
-          .home-container10 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 80vh;
-            display: flex;
-            align-items: flex-start;
-            padding-left: 0px;
-            padding-right: var(--dl-space-space-fiveunits);
-          }
-          .home-link4 {
-            display: contents;
-          }
           .home-container11 {
             flex: 0 0 auto;
             width: 60%;
@@ -358,20 +270,7 @@ const Home = (props) => {
             height: 100%;
             object-fit: cover;
           }
-          .home-link5 {
-            display: contents;
-          }
           .home-container12 {
-            flex: 0 0 auto;
-            width: 40%;
-            height: 100%;
-            display: flex;
-            padding: var(--dl-space-space-twounits);
-            align-items: flex-start;
-            padding-top: 32px;
-            flex-direction: column;
-            justify-content: space-between;
-            text-decoration: none;
             background-color: #d7c16d;
           }
           .home-text06 {
@@ -379,27 +278,7 @@ const Home = (props) => {
             font-family: 'Inria Sans';
             font-weight: 700;
           }
-          .home-container13 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 80vh;
-            display: flex;
-            align-items: flex-start;
-            padding-left: var(--dl-space-space-fiveunits);
-          }
-          .home-link6 {
-            display: contents;
-          }
           .home-container14 {
-            flex: 0 0 auto;
-            width: 40%;
-            height: 100%;
-            display: flex;
-            padding: var(--dl-space-space-twounits);
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: space-between;
-            text-decoration: none;
             background-color: #2fa3a3;
           }
           .home-container15 {
@@ -418,14 +297,8 @@ const Home = (props) => {
             height: 100%;
             object-fit: cover;
           }
+
           @media (max-width: 479px) {
-            .home-container01 {
-              height: 20vh;
-              padding-left: 0px;
-            }
-            .home-container02 {
-              width: 50%;
-            }
             .home-container03 {
               width: 50%;
             }
@@ -434,9 +307,6 @@ const Home = (props) => {
               padding-right: 0px;
             }
             .home-container05 {
-              width: 50%;
-            }
-            .home-container06 {
               width: 50%;
             }
             .home-container07 {

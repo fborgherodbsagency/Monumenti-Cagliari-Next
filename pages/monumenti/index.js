@@ -5,13 +5,13 @@ import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 import { getEntitiesWithPagination } from '@teleporthq/cms-mappers/caisy'
 
-const Monumenti = (props) => {
+const Monumenti1 = (props) => {
   return (
     <>
-      <div className="monumenti-container">
+      <div className="monumenti1-container">
         <Head>
-          <title>Monumenti - Monumenti Cagliari</title>
-          <meta property="og:title" content="Monumenti - Monumenti Cagliari" />
+          <title>Monumenti1 - Monumenti Cagliari</title>
+          <meta property="og:title" content="Monumenti1 - Monumenti Cagliari" />
         </Head>
         <DataProvider
           renderSuccess={(params) => (
@@ -20,7 +20,7 @@ const Monumenti = (props) => {
                 items={params}
                 renderItem={(MonumentiEntities) => (
                   <>
-                    <div className="monumenti-container1">
+                    <div className="monumenti1-container1">
                       <h1>{MonumentiEntities?.name}</h1>
                       <span>{MonumentiEntities?.name}</span>
                       <span>{MonumentiEntities?.descriptiveSummary}</span>
@@ -37,7 +37,7 @@ const Monumenti = (props) => {
       </div>
       <style jsx>
         {`
-          .monumenti-container {
+          .monumenti1-container {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -45,7 +45,7 @@ const Monumenti = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .monumenti-container1 {
+          .monumenti1-container1 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -58,15 +58,15 @@ const Monumenti = (props) => {
   )
 }
 
-Monumenti.defaultProps = {
+Monumenti1.defaultProps = {
   monumentiEntities: [],
 }
 
-Monumenti.propTypes = {
+Monumenti1.propTypes = {
   monumentiEntities: PropTypes.array,
 }
 
-export default Monumenti
+export default Monumenti1
 
 export async function getStaticProps(context) {
   try {
@@ -88,7 +88,7 @@ export async function getStaticProps(context) {
         monumentiEntities: response,
         ...response?.meta,
       },
-      revalidate: 30,
+      revalidate: 60,
     }
   } catch (error) {
     return {

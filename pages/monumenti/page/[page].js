@@ -8,13 +8,13 @@ import {
   getEntitiesWithPagination,
 } from '@teleporthq/cms-mappers/caisy'
 
-const Monumenti1 = (props) => {
+const Monumenti11 = (props) => {
   return (
     <>
-      <div className="monumenti1-container">
+      <div className="monumenti11-container">
         <Head>
-          <title>Monumenti - Monumenti Cagliari</title>
-          <meta property="og:title" content="Monumenti - Monumenti Cagliari" />
+          <title>Monumenti1 - Monumenti Cagliari</title>
+          <meta property="og:title" content="Monumenti1 - Monumenti Cagliari" />
         </Head>
         <DataProvider
           renderSuccess={(params) => (
@@ -23,7 +23,7 @@ const Monumenti1 = (props) => {
                 items={params}
                 renderItem={(MonumentiEntities) => (
                   <>
-                    <div className="monumenti1-container1">
+                    <div className="monumenti11-container1">
                       <h1>{MonumentiEntities?.name}</h1>
                       <span>{MonumentiEntities?.name}</span>
                       <span>{MonumentiEntities?.descriptiveSummary}</span>
@@ -40,7 +40,7 @@ const Monumenti1 = (props) => {
       </div>
       <style jsx>
         {`
-          .monumenti1-container {
+          .monumenti11-container {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -48,7 +48,7 @@ const Monumenti1 = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .monumenti1-container1 {
+          .monumenti11-container1 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -61,15 +61,15 @@ const Monumenti1 = (props) => {
   )
 }
 
-Monumenti1.defaultProps = {
+Monumenti11.defaultProps = {
   monumentiEntities: [],
 }
 
-Monumenti1.propTypes = {
+Monumenti11.propTypes = {
   monumentiEntities: PropTypes.array,
 }
 
-export default Monumenti1
+export default Monumenti11
 
 export async function getStaticPaths() {
   try {
@@ -120,7 +120,7 @@ export async function getStaticProps(context) {
         monumentiEntities: response,
         ...response?.meta,
       },
-      revalidate: 30,
+      revalidate: 60,
     }
   } catch (error) {
     return {

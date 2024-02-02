@@ -44,7 +44,7 @@ const CriptaDiSantaRestituta = (props) => {
                           <img
                             alt="image"
                             src={context_u4as6i?.pattern?.url}
-                            className="cripta-di-santa-restituta-image"
+                            className="location-detail-icon"
                           />
                         </div>
                       </div>
@@ -241,11 +241,6 @@ const CriptaDiSantaRestituta = (props) => {
             align-items: center;
             flex-direction: column;
             justify-content: center;
-          }
-          .cripta-di-santa-restituta-image {
-            width: 100%;
-            max-width: 400px;
-            object-fit: cover;
           }
           .cripta-di-santa-restituta-section-storia {
             flex: 0 0 auto;
@@ -447,11 +442,6 @@ const CriptaDiSantaRestituta = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          @media (max-width: 767px) {
-            .cripta-di-santa-restituta-image {
-              width: 70%;
-            }
-          }
           @media (max-width: 479px) {
             .cripta-di-santa-restituta-section-header {
               height: 100%;
@@ -489,9 +479,6 @@ const CriptaDiSantaRestituta = (props) => {
               width: 100%;
               align-items: center;
               justify-content: flex-start;
-            }
-            .cripta-di-santa-restituta-image {
-              width: var(--dl-size-size-large);
             }
             .cripta-di-santa-restituta-section-storia {
               flex: 1;
@@ -588,7 +575,7 @@ export async function getStaticProps(context) {
       query:
         'query Monumenti($value:ID!){Monumenti(id:$value){_meta{createdAt updatedAt id}name pattern{__typename _meta{createdAt updatedAt id}description height id src title width}posiiton headerColor noteStoriche primaryImage{__typename _meta{createdAt updatedAt id}description height id src title width}visitingHours{json connections{__typename  }}orarioInvernale{json connections{__typename  }}percheVisitarlo noteStoricheImage{__typename _meta{createdAt updatedAt id}description height id src title width}descriptiveSummary}}',
       attribute: 'id',
-      id: '414395c3-82af-4390-a5b9-724a5f992773',
+      id: '7b9f7924-0bb9-46dc-81db-6babd9c3c5c2',
     })
     return {
       props: {
