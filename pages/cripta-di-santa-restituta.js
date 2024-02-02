@@ -588,7 +588,7 @@ export async function getStaticProps(context) {
       query:
         'query Monumenti($value:ID!){Monumenti(id:$value){_meta{createdAt updatedAt id}name pattern{__typename _meta{createdAt updatedAt id}description height id src title width}posiiton headerColor noteStoriche primaryImage{__typename _meta{createdAt updatedAt id}description height id src title width}visitingHours{json connections{__typename  }}orarioInvernale{json connections{__typename  }}percheVisitarlo noteStoricheImage{__typename _meta{createdAt updatedAt id}description height id src title width}descriptiveSummary}}',
       attribute: 'id',
-      id: '7b9f7924-0bb9-46dc-81db-6babd9c3c5c2',
+      id: '414395c3-82af-4390-a5b9-724a5f992773',
     })
     return {
       props: {
