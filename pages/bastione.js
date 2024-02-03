@@ -586,7 +586,7 @@ export async function getStaticProps(context) {
       ...context?.params,
       projectId: 'e37dde76-3990-46c8-ae2d-e8de13e0247e',
       query:
-        'query Monumenti($value:ID!){Monumenti(id:$value){_meta{createdAt updatedAt id}headerColor locationIcon{__typename _meta{createdAt updatedAt id}description height id src title width}locationName primaryImage{__typename _meta{createdAt updatedAt id}description height id src title width}locationAddress percheVisitarlo briefDescription noteStoricheImage{__typename _meta{createdAt updatedAt id}description height id src title width}descriptiveSummary visitingHoursSummer{json connections{__typename  }}visitingHoursWinter{json connections{__typename  }}}}',
+        'query Monumenti($value:ID!){Monumenti(id:$value){_meta{createdAt updatedAt id}headerColor squareImage{__typename _meta{createdAt updatedAt id}description height id src title width}locationIcon{__typename _meta{createdAt updatedAt id}description height id src title width}locationName primaryImage{__typename _meta{createdAt updatedAt id}description height id src title width}verticalImage{__typename _meta{createdAt updatedAt id}description height id src title width}fullDescription{json connections{__typename ...on Asset{description height id src title width} }}locationAddress percheVisitarlo briefDescription locationFeatures{json connections{__typename  }}visitingHoursSummer{json connections{__typename  }}visitingHoursWinter{json connections{__typename  }}}}',
       attribute: 'id',
       id: '7b9f7924-0bb9-46dc-81db-6babd9c3c5c2',
     })

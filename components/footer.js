@@ -5,37 +5,45 @@ import PropTypes from 'prop-types'
 const Footer = (props) => {
   return (
     <>
-      <div className={`footer-container ${props.rootClassName} `}>
+      <div id="footer" className={`footer-container ${props.rootClassName} `}>
         <footer className="footer-footer">
           <div className="footer-container1">
             <img
               alt="logo"
-              src="/monumenticagliari-white-1500h.png"
+              src="/monumenticagliari-white-1400w.png"
               className="footer-image"
             />
-            <img
-              alt="logo"
-              src="/frame%20(1)-1500h.png"
-              className="footer-image1"
-            />
+            <div className="footer-container2">
+              <img
+                alt="logo"
+                src="/comunedicagliari-1400w.png"
+                className="footer-image1"
+              />
+              <img
+                alt="logo"
+                src="/semata-1400w.png"
+                className="footer-image2"
+              />
+            </div>
           </div>
           <div className="footer-icon-group">
-            <div className="footer-container2">
+            <div className="footer-container3">
               <img
                 alt={props.imageAlt5}
                 src={props.imageSrc5}
-                className="footer-image2"
+                className="footer-image3"
               />
               <img
                 alt={props.imageAlt51}
                 src={props.imageSrc51}
-                className="footer-image3"
+                className="footer-image4"
               />
             </div>
-            <div className="footer-container3">
-              <div className="footer-container4">
+            <div className="footer-container4">
+              <div className="footer-container5">
                 <span className="footer-text">{props.text5}</span>
                 <span className="footer-text1">{props.text51}</span>
+                <span className="footer-text2">{props.text511}</span>
               </div>
             </div>
           </div>
@@ -45,25 +53,23 @@ const Footer = (props) => {
         {`
           .footer-container {
             width: 100%;
-            height: 250px;
             display: flex;
             position: relative;
-            align-items: flex-start;
+            align-items: center;
             flex-direction: column;
             background-color: #2b393f;
           }
           .footer-footer {
             width: 100%;
-            height: 100%;
             display: flex;
             max-width: var(--dl-size-size-maxwidth);
-            padding-top: var(--dl-space-space-twounits);
+            padding-top: var(--dl-space-space-sixunits);
             border-color: var(--dl-color-gray-black);
             border-width: 1px;
             padding-left: var(--dl-space-space-threeunits);
             padding-right: var(--dl-space-space-threeunits);
             flex-direction: row;
-            padding-bottom: var(--dl-space-space-twounits);
+            padding-bottom: var(--dl-space-space-sixunits);
             justify-content: space-between;
             border-top-width: 1px;
             border-left-width: 0px;
@@ -78,19 +84,30 @@ const Footer = (props) => {
             flex-direction: column;
           }
           .footer-image {
-            height: 5rem;
+            height: 150px;
+          }
+          .footer-container2 {
+            gap: var(--dl-space-space-twounits);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
           }
           .footer-image1 {
-            height: 5rem;
+            height: 100px;
+          }
+          .footer-image2 {
+            height: 100px;
           }
           .footer-icon-group {
+            gap: var(--dl-space-space-threeunits);
+            width: 30%;
             display: flex;
             margin-top: var(--dl-space-space-oneandhalfunits);
             align-items: flex-end;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
           }
-          .footer-container2 {
+          .footer-container3 {
             flex: 0 0 auto;
             width: 100%;
             height: auto;
@@ -98,25 +115,25 @@ const Footer = (props) => {
             align-items: flex-start;
             justify-content: flex-end;
           }
-          .footer-image2 {
+          .footer-image3 {
             width: var(--dl-size-size-xsmall);
             object-fit: cover;
             margin-right: var(--dl-space-space-oneandhalfunits);
           }
-          .footer-image3 {
+          .footer-image4 {
             width: var(--dl-size-size-xsmall);
             object-fit: cover;
           }
-          .footer-container3 {
+          .footer-container4 {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
             align-items: flex-start;
             justify-content: flex-end;
           }
-          .footer-container4 {
+          .footer-container5 {
             flex: 0 0 auto;
-            width: 200px;
+            width: 100%;
             display: flex;
             align-items: flex-end;
             flex-direction: column;
@@ -130,6 +147,14 @@ const Footer = (props) => {
           .footer-text1 {
             color: #ffffff;
             font-size: 14px;
+            margin-top: var(--dl-space-space-unit);
+            text-align: right;
+            font-family: 'Montserrat';
+            font-weight: 400;
+          }
+          .footer-text2 {
+            color: #ffffff;
+            font-size: 18px;
             margin-top: var(--dl-space-space-unit);
             text-align: right;
             font-family: 'Montserrat';
@@ -155,16 +180,45 @@ const Footer = (props) => {
             .footer-image1 {
               margin-bottom: var(--dl-space-space-oneandhalfunits);
             }
+            .footer-image2 {
+              margin-bottom: var(--dl-space-space-oneandhalfunits);
+            }
           }
           @media (max-width: 479px) {
             .footer-footer {
-              padding: var(--dl-space-space-unit);
+              padding-top: var(--dl-space-space-fourunits);
+              padding-left: var(--dl-space-space-twounits);
+              padding-right: var(--dl-space-space-twounits);
+              padding-bottom: var(--dl-space-space-fourunits);
             }
             .footer-image {
               margin-bottom: 0px;
             }
             .footer-image1 {
               margin-bottom: 0px;
+            }
+            .footer-image2 {
+              margin-bottom: 0px;
+            }
+            .footer-icon-group {
+              width: 100%;
+              align-self: center;
+            }
+            .footer-container3 {
+              align-self: center;
+              justify-content: center;
+            }
+            .footer-container5 {
+              align-items: center;
+            }
+            .footer-text {
+              text-align: center;
+            }
+            .footer-text1 {
+              text-align: center;
+            }
+            .footer-text2 {
+              text-align: center;
             }
           }
         `}
@@ -197,6 +251,7 @@ Footer.defaultProps = {
   imageSrc: 'https://play.teleporthq.io/static/svg/default-img.svg',
   text2: 'Text',
   text4: 'Text',
+  text511: '+39 070 677 7900 info.beniculturalicagliari@gmail.com',
 }
 
 Footer.propTypes = {
@@ -222,6 +277,7 @@ Footer.propTypes = {
   imageSrc: PropTypes.string,
   text2: PropTypes.string,
   text4: PropTypes.string,
+  text511: PropTypes.string,
 }
 
 export default Footer

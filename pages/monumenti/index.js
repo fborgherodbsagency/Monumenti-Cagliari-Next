@@ -5,13 +5,13 @@ import { DataProvider, Repeater } from '@teleporthq/react-components'
 import PropTypes from 'prop-types'
 import { getEntitiesWithPagination } from '@teleporthq/cms-mappers/caisy'
 
-const Monumenti = (props) => {
+const Monumenti1 = (props) => {
   return (
     <>
-      <div className="monumenti-container">
+      <div className="monumenti1-container">
         <Head>
-          <title>Monumenti - Monumenti Cagliari</title>
-          <meta property="og:title" content="Monumenti - Monumenti Cagliari" />
+          <title>Monumenti1 - Monumenti Cagliari</title>
+          <meta property="og:title" content="Monumenti1 - Monumenti Cagliari" />
         </Head>
         <DataProvider
           renderSuccess={(params) => (
@@ -20,9 +20,9 @@ const Monumenti = (props) => {
                 items={params}
                 renderItem={(MonumentiEntities) => (
                   <>
-                    <div className="monumenti-container1">
+                    <div className="monumenti1-container1">
                       <span>{MonumentiEntities?.locationName}</span>
-                      <span>{MonumentiEntities?.descriptiveSummary}</span>
+                      <span>{MonumentiEntities?.briefDescription}</span>
                       <span>{MonumentiEntities?.locationAddress}</span>
                     </div>
                   </>
@@ -37,7 +37,7 @@ const Monumenti = (props) => {
       </div>
       <style jsx>
         {`
-          .monumenti-container {
+          .monumenti1-container {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -45,7 +45,7 @@ const Monumenti = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .monumenti-container1 {
+          .monumenti1-container1 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -58,15 +58,15 @@ const Monumenti = (props) => {
   )
 }
 
-Monumenti.defaultProps = {
+Monumenti1.defaultProps = {
   monumentiEntities: [],
 }
 
-Monumenti.propTypes = {
+Monumenti1.propTypes = {
   monumentiEntities: PropTypes.array,
 }
 
-export default Monumenti
+export default Monumenti1
 
 export async function getStaticProps(context) {
   try {
@@ -74,7 +74,7 @@ export async function getStaticProps(context) {
       ...context?.params,
       projectId: 'e37dde76-3990-46c8-ae2d-e8de13e0247e',
       query:
-        'query MyQuery($first: Int, $after: String){allMonumenti(first: $first, after: $after){pageInfo{endCursor,hasNextPage,hasPreviousPage}edges{node{_meta{createdAt updatedAt id}headerColor locationIcon{__typename _meta{createdAt updatedAt id}description height id src title width}locationName primaryImage{__typename _meta{createdAt updatedAt id}description height id src title width}locationAddress percheVisitarlo briefDescription noteStoricheImage{__typename _meta{createdAt updatedAt id}description height id src title width}descriptiveSummary visitingHoursSummer{json connections{__typename  }}visitingHoursWinter{json connections{__typename  }}}}}}',
+        'query MyQuery($first: Int, $after: String){allMonumenti(first: $first, after: $after){pageInfo{endCursor,hasNextPage,hasPreviousPage}edges{node{_meta{createdAt updatedAt id}headerColor squareImage{__typename _meta{createdAt updatedAt id}description height id src title width}locationIcon{__typename _meta{createdAt updatedAt id}description height id src title width}locationName primaryImage{__typename _meta{createdAt updatedAt id}description height id src title width}verticalImage{__typename _meta{createdAt updatedAt id}description height id src title width}fullDescription{json connections{__typename ...on Asset{description height id src title width} }}locationAddress percheVisitarlo briefDescription locationFeatures{json connections{__typename  }}visitingHoursSummer{json connections{__typename  }}visitingHoursWinter{json connections{__typename  }}}}}}',
       page: 1,
       perPage: 10,
     })

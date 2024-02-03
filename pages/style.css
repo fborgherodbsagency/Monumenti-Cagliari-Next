@@ -196,8 +196,14 @@
 }
 
 @media(max-width: 767px) {
+  .heading2-home {
+    font-size: 32px;
+  }
   .location-detail-icon {
     width: 70%;
+  }
+  .row-location {
+    height: 40vh;
   }
 }
 @media(max-width: 479px) {
@@ -216,7 +222,7 @@
     width: var(--dl-size-size-large);
   }
   .row-location {
-    height: 20vh;
+    height: 40vh;
     padding-left: 0px;
   }
   .location-title-box {

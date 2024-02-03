@@ -14,19 +14,20 @@ const Navbar = (props) => {
       >
         <div className="navbar-container">
           <div className="navbar-container1">
-            <Link href="/home">
-              <a className="navbar-link">
-                <img
-                  alt={props.imageAlt}
-                  src={props.imageSrc}
-                  className="navbar-image"
-                />
-              </a>
-            </Link>
+            <div className="navbar-logo">
+              <Link href="/">
+                <a className="navbar-link">
+                  <img
+                    alt={props.imageAlt}
+                    src={props.imageSrc}
+                    className="navbar-image"
+                  />
+                </a>
+              </Link>
+            </div>
             <div className="navbar-nav">
               <NavigationLinks rootClassName="rootClassName8"></NavigationLinks>
             </div>
-            <div className="navbar-btn-group"></div>
           </div>
         </div>
         <div data-role="BurgerMenu" className="navbar-burger-menu">
@@ -71,10 +72,10 @@ const Navbar = (props) => {
             position: relative;
             max-width: var(--dl-size-size-maxwidth);
             align-items: center;
-            padding-top: var(--dl-space-space-unit);
+            padding-top: var(--dl-space-space-twounits);
             padding-left: var(--dl-space-space-threeunits);
             padding-right: var(--dl-space-space-threeunits);
-            padding-bottom: var(--dl-space-space-unit);
+            padding-bottom: var(--dl-space-space-twounits);
             justify-content: space-between;
           }
           .navbar-container {
@@ -87,7 +88,13 @@ const Navbar = (props) => {
           }
           .navbar-container1 {
             flex: 0 0 auto;
-            width: 200px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .navbar-logo {
             display: flex;
             align-items: flex-start;
             flex-direction: column;
@@ -96,20 +103,12 @@ const Navbar = (props) => {
             display: contents;
           }
           .navbar-image {
-            width: 8rem;
-            height: 100%;
+            max-width: 225px;
             text-decoration: none;
           }
           .navbar-nav {
             display: flex;
             margin-left: 0px;
-          }
-          .navbar-btn-group {
-            border: 2px dashed rgba(120, 120, 120, 0.4);
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            justify-content: space-between;
           }
           .navbar-burger-menu {
             display: none;
@@ -178,9 +177,6 @@ const Navbar = (props) => {
             .navbar-nav {
               display: none;
             }
-            .navbar-btn-group {
-              display: none;
-            }
             .navbar-burger-menu {
               display: flex;
               align-items: center;
@@ -194,9 +190,6 @@ const Navbar = (props) => {
             .navbar-container1 {
               width: auto;
             }
-            .navbar-image {
-              width: 5rem;
-            }
             .navbar-mobile-menu {
               padding: 16px;
             }
@@ -208,7 +201,7 @@ const Navbar = (props) => {
 }
 
 Navbar.defaultProps = {
-  imageSrc: '/a-s-black-1500w.png',
+  imageSrc: '/logomca-positive-200h.png',
   imageAlt1: 'image',
   imageSrc1: 'https://presentation-website-assets.teleporthq.io/logos/logo.png',
   textTop1: 'Vuoi saperne di più',
