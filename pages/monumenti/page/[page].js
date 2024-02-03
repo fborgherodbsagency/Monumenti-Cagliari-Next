@@ -8,13 +8,13 @@ import {
   getEntitiesWithPagination,
 } from '@teleporthq/cms-mappers/caisy'
 
-const Monumenti11 = (props) => {
+const Monumenti1 = (props) => {
   return (
     <>
-      <div className="monumenti11-container">
+      <div className="monumenti1-container">
         <Head>
-          <title>Monumenti1 - Monumenti Cagliari</title>
-          <meta property="og:title" content="Monumenti1 - Monumenti Cagliari" />
+          <title>Monumenti - Monumenti Cagliari</title>
+          <meta property="og:title" content="Monumenti - Monumenti Cagliari" />
         </Head>
         <DataProvider
           renderSuccess={(params) => (
@@ -23,10 +23,10 @@ const Monumenti11 = (props) => {
                 items={params}
                 renderItem={(MonumentiEntities) => (
                   <>
-                    <div className="monumenti11-container1">
-                      <h1>{MonumentiEntities?.name}</h1>
-                      <span>{MonumentiEntities?.name}</span>
+                    <div className="monumenti1-container1">
+                      <span>{MonumentiEntities?.locationName}</span>
                       <span>{MonumentiEntities?.descriptiveSummary}</span>
+                      <span>{MonumentiEntities?.locationAddress}</span>
                     </div>
                   </>
                 )}
@@ -40,7 +40,7 @@ const Monumenti11 = (props) => {
       </div>
       <style jsx>
         {`
-          .monumenti11-container {
+          .monumenti1-container {
             width: 100%;
             display: flex;
             overflow: auto;
@@ -48,7 +48,7 @@ const Monumenti11 = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .monumenti11-container1 {
+          .monumenti1-container1 {
             gap: 12px;
             width: 100%;
             display: flex;
@@ -61,15 +61,15 @@ const Monumenti11 = (props) => {
   )
 }
 
-Monumenti11.defaultProps = {
+Monumenti1.defaultProps = {
   monumentiEntities: [],
 }
 
-Monumenti11.propTypes = {
+Monumenti1.propTypes = {
   monumentiEntities: PropTypes.array,
 }
 
-export default Monumenti11
+export default Monumenti1
 
 export async function getStaticPaths() {
   try {
@@ -106,7 +106,7 @@ export async function getStaticProps(context) {
       ...context?.params,
       projectId: 'e37dde76-3990-46c8-ae2d-e8de13e0247e',
       query:
-        'query MyQuery($first: Int, $after: String){allMonumenti(first: $first, after: $after){pageInfo{endCursor,hasNextPage,hasPreviousPage}edges{node{_meta{createdAt updatedAt id}name pattern{__typename _meta{createdAt updatedAt id}description height id src title width}posiiton headerColor noteStoriche primaryImage{__typename _meta{createdAt updatedAt id}description height id src title width}visitingHours{json connections{__typename  }}orarioInvernale{json connections{__typename  }}percheVisitarlo noteStoricheImage{__typename _meta{createdAt updatedAt id}description height id src title width}descriptiveSummary}}}}',
+        'query MyQuery($first: Int, $after: String){allMonumenti(first: $first, after: $after){pageInfo{endCursor,hasNextPage,hasPreviousPage}edges{node{_meta{createdAt updatedAt id}headerColor locationIcon{__typename _meta{createdAt updatedAt id}description height id src title width}locationName primaryImage{__typename _meta{createdAt updatedAt id}description height id src title width}locationAddress percheVisitarlo briefDescription noteStoricheImage{__typename _meta{createdAt updatedAt id}description height id src title width}descriptiveSummary visitingHoursSummer{json connections{__typename  }}visitingHoursWinter{json connections{__typename  }}}}}}',
       page: context.params.page,
       perPage: 10,
     })

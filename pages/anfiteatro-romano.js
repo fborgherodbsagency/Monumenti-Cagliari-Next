@@ -7,7 +7,7 @@ import {
   CaisyDocumentLink,
 } from '@teleporthq/react-components'
 import { RichTextRenderer } from '@caisy/rich-text-react-renderer'
-import { getEntityByAttribute as getEntityByAttribute9 } from '@teleporthq/cms-mappers/caisy'
+import { getEntityByAttribute as getEntityByAttribute10 } from '@teleporthq/cms-mappers/caisy'
 
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
@@ -581,11 +581,11 @@ export default AnfiteatroRomano
 
 export async function getStaticProps(context) {
   try {
-    const contextU4as6iProp = await getEntityByAttribute9({
+    const contextU4as6iProp = await getEntityByAttribute10({
       ...context?.params,
       projectId: 'e37dde76-3990-46c8-ae2d-e8de13e0247e',
       query:
-        'query Monumenti($value:ID!){Monumenti(id:$value){_meta{createdAt updatedAt id}name pattern{__typename _meta{createdAt updatedAt id}description height id src title width}posiiton headerColor noteStoriche primaryImage{__typename _meta{createdAt updatedAt id}description height id src title width}visitingHours{json connections{__typename  }}orarioInvernale{json connections{__typename  }}percheVisitarlo noteStoricheImage{__typename _meta{createdAt updatedAt id}description height id src title width}descriptiveSummary}}',
+        'query Monumenti($value:ID!){Monumenti(id:$value){_meta{createdAt updatedAt id}headerColor locationIcon{__typename _meta{createdAt updatedAt id}description height id src title width}locationName primaryImage{__typename _meta{createdAt updatedAt id}description height id src title width}locationAddress percheVisitarlo briefDescription noteStoricheImage{__typename _meta{createdAt updatedAt id}description height id src title width}descriptiveSummary visitingHoursSummer{json connections{__typename  }}visitingHoursWinter{json connections{__typename  }}}}',
       attribute: 'id',
       id: '7b9f7924-0bb9-46dc-81db-6babd9c3c5c2',
     })

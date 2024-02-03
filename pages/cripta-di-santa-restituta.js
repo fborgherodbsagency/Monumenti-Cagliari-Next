@@ -6,8 +6,10 @@ import {
   Repeater,
   CaisyDocumentLink,
 } from '@teleporthq/react-components'
-import { RichTextRenderer } from '@caisy/rich-text-react-renderer'
-import { getEntityByAttribute as getEntityByAttribute9 } from '@teleporthq/cms-mappers/caisy'
+import {
+  getEntityByAttribute as getEntityByAttribute10,
+  getEntityByAttribute as getEntityByAttribute7,
+} from '@teleporthq/cms-mappers/caisy'
 
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
@@ -26,24 +28,39 @@ const CriptaDiSantaRestituta = (props) => {
         <Navbar></Navbar>
         <div className="cripta-di-santa-restituta-container01">
           <DataProvider
-            renderSuccess={(context_u4as6i) => (
+            renderSuccess={(context_u4as6i) => <></>}
+            renderLoading={() => (
               <>
                 <div className="cripta-di-santa-restituta-container02">
+                  <div className="cripta-di-santa-restituta-container03">
+                    <h1 className="heading1-detail">Loading</h1>
+                  </div>
+                </div>
+              </>
+            )}
+            initialData={props.contextU4as6iProp}
+            persistDataDuringLoading={true}
+            key={props?.contextU4as6iProp?.id}
+          />
+          <DataProvider
+            renderSuccess={(context_75gp0s) => (
+              <>
+                <div className="cripta-di-santa-restituta-container04">
                   <div className="cripta-di-santa-restituta-section-header">
                     <div className="cripta-di-santa-restituta-container-centered">
                       <div className="cripta-di-santa-restituta-block-region">
                         <div className="cripta-di-santa-restituta-region-left">
-                          <h1 className="cripta-di-santa-restituta-text">
-                            {context_u4as6i?.name}
+                          <h1 className="cripta-di-santa-restituta-text01">
+                            {context_75gp0s?.name}
                           </h1>
-                          <p className="cripta-di-santa-restituta-text01 peragraph-detail">
-                            {context_u4as6i?.posiiton}
+                          <p className="cripta-di-santa-restituta-text02 peragraph-detail">
+                            text
                           </p>
                         </div>
                         <div className="cripta-di-santa-restituta-region-right">
                           <img
                             alt="image"
-                            src={context_u4as6i?.pattern?.url}
+                            src={context_75gp0s?.pattern?.url}
                             className="location-detail-icon"
                           />
                         </div>
@@ -51,25 +68,25 @@ const CriptaDiSantaRestituta = (props) => {
                     </div>
                   </div>
                   <div className="cripta-di-santa-restituta-section-storia">
-                    <div className="cripta-di-santa-restituta-container03 container-centered">
-                      <div className="cripta-di-santa-restituta-container04 block-region">
-                        <div className="cripta-di-santa-restituta-container05">
+                    <div className="cripta-di-santa-restituta-container05 container-centered">
+                      <div className="cripta-di-santa-restituta-container06 block-region">
+                        <div className="cripta-di-santa-restituta-container07">
                           <img
                             alt="image"
-                            src={context_u4as6i?.primaryImage?.url}
+                            src={context_75gp0s?.primaryImage?.url}
                             className="cripta-di-santa-restituta-image1"
                           />
-                          <div className="cripta-di-santa-restituta-container06">
-                            <div className="cripta-di-santa-restituta-container07">
+                          <div className="cripta-di-santa-restituta-container08">
+                            <div className="cripta-di-santa-restituta-container09">
                               <h2 className="heading2-details">In Breve</h2>
-                              <p>{context_u4as6i?.noteStoriche}</p>
+                              <p>{context_75gp0s?.noteStoriche}</p>
                             </div>
                           </div>
                         </div>
-                        <div className="cripta-di-santa-restituta-container08">
+                        <div className="cripta-di-santa-restituta-container10">
                           <img
                             alt="image"
-                            src={context_u4as6i?.noteStoricheImage?.url}
+                            src={context_75gp0s?.noteStoricheImage?.url}
                             className="cripta-di-santa-restituta-image2"
                           />
                         </div>
@@ -80,16 +97,16 @@ const CriptaDiSantaRestituta = (props) => {
                     <div className="container-centered">
                       <div className="block-region">
                         <div className="cripta-di-santa-restituta-region-left1">
-                          <h2 className="cripta-di-santa-restituta-text04 heading2-details">
-                            <span className="cripta-di-santa-restituta-text05">
+                          <h2 className="cripta-di-santa-restituta-text05 heading2-details">
+                            <span className="cripta-di-santa-restituta-text06">
                               Perchè visitarlo?
                             </span>
                             <br></br>
                           </h2>
                         </div>
                         <div className="cripta-di-santa-restituta-region-right1">
-                          <p className="cripta-di-santa-restituta-text07">
-                            {context_u4as6i?.percheVisitarlo}
+                          <p className="cripta-di-santa-restituta-text08">
+                            text
                           </p>
                         </div>
                       </div>
@@ -99,41 +116,31 @@ const CriptaDiSantaRestituta = (props) => {
                     <div className="container-centered">
                       <div className="cripta-di-santa-restituta-block-region2 block-region">
                         <div className="cripta-di-santa-restituta-region-left2">
-                          <div className="cripta-di-santa-restituta-container09">
-                            <div className="cripta-di-santa-restituta-container10">
-                              <h3 className="cripta-di-santa-restituta-text08 heading2-details">
-                                <span className="cripta-di-santa-restituta-text09">
+                          <div className="cripta-di-santa-restituta-container11">
+                            <div className="cripta-di-santa-restituta-container12">
+                              <h3 className="cripta-di-santa-restituta-text09 heading2-details">
+                                <span className="cripta-di-santa-restituta-text10">
                                   Orari Estivi
                                 </span>
                                 <br></br>
                               </h3>
                               <div className="rich-text-orari">
-                                <RichTextRenderer
-                                  node={context_u4as6i?.visitingHours}
-                                  overwrites={{
-                                    documentLink: CaisyDocumentLink,
-                                  }}
-                                ></RichTextRenderer>
+                                <cms-richtext className="rich-text-orari"></cms-richtext>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div className="cripta-di-santa-restituta-region-right2">
-                          <div className="cripta-di-santa-restituta-container12">
-                            <div className="cripta-di-santa-restituta-container13">
-                              <h3 className="cripta-di-santa-restituta-text11 heading2-details">
-                                <span className="cripta-di-santa-restituta-text12">
+                          <div className="cripta-di-santa-restituta-container14">
+                            <div className="cripta-di-santa-restituta-container15">
+                              <h3 className="cripta-di-santa-restituta-text12 heading2-details">
+                                <span className="cripta-di-santa-restituta-text13">
                                   Orari Invernali
                                 </span>
                                 <br></br>
                               </h3>
                               <div className="rich-text-orari">
-                                <RichTextRenderer
-                                  node={context_u4as6i?.orarioInvernale}
-                                  overwrites={{
-                                    documentLink: CaisyDocumentLink,
-                                  }}
-                                ></RichTextRenderer>
+                                <cms-richtext className="rich-text-orari"></cms-richtext>
                               </div>
                             </div>
                           </div>
@@ -144,18 +151,9 @@ const CriptaDiSantaRestituta = (props) => {
                 </div>
               </>
             )}
-            renderLoading={() => (
-              <>
-                <div className="cripta-di-santa-restituta-container15">
-                  <div className="cripta-di-santa-restituta-container16">
-                    <h1 className="heading1-detail">Loading</h1>
-                  </div>
-                </div>
-              </>
-            )}
-            initialData={props.contextU4as6iProp}
+            initialData={props.context75gp0sProp}
             persistDataDuringLoading={true}
-            key={props?.contextU4as6iProp?.id}
+            key={props?.context75gp0sProp?.id}
           />
         </div>
         <Footer rootClassName="footer-root-class-name3"></Footer>
@@ -178,6 +176,23 @@ const CriptaDiSantaRestituta = (props) => {
             align-items: flex-start;
           }
           .cripta-di-santa-restituta-container02 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+          }
+          .cripta-di-santa-restituta-container03 {
+            flex: 0 0 auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            padding: var(--dl-space-space-fourunits);
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .cripta-di-santa-restituta-container04 {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
@@ -224,13 +239,13 @@ const CriptaDiSantaRestituta = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .cripta-di-santa-restituta-text {
+          .cripta-di-santa-restituta-text01 {
             font-size: 5rem;
             font-style: normal;
             font-family: 'Inria Serif';
             font-weight: 400;
           }
-          .cripta-di-santa-restituta-text01 {
+          .cripta-di-santa-restituta-text02 {
             margin-top: var(--dl-space-space-fiveunits);
           }
           .cripta-di-santa-restituta-region-right {
@@ -250,21 +265,21 @@ const CriptaDiSantaRestituta = (props) => {
             align-items: flex-start;
             justify-content: center;
           }
-          .cripta-di-santa-restituta-container03 {
+          .cripta-di-santa-restituta-container05 {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
             align-items: flex-start;
             flex-direction: column;
           }
-          .cripta-di-santa-restituta-container04 {
+          .cripta-di-santa-restituta-container06 {
             flex: 0 0 auto;
             width: 100%;
             height: 100%;
             display: flex;
             align-items: flex-start;
           }
-          .cripta-di-santa-restituta-container05 {
+          .cripta-di-santa-restituta-container07 {
             flex: 0 0 auto;
             width: 55%;
             height: 100%;
@@ -277,13 +292,13 @@ const CriptaDiSantaRestituta = (props) => {
             height: 100%;
             object-fit: cover;
           }
-          .cripta-di-santa-restituta-container06 {
+          .cripta-di-santa-restituta-container08 {
             flex: 0 0 auto;
             width: 100%;
             height: 100%;
             display: flex;
           }
-          .cripta-di-santa-restituta-container07 {
+          .cripta-di-santa-restituta-container09 {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
@@ -291,7 +306,7 @@ const CriptaDiSantaRestituta = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .cripta-di-santa-restituta-container08 {
+          .cripta-di-santa-restituta-container10 {
             flex: 0 0 auto;
             width: 45%;
             height: 100%;
@@ -327,7 +342,7 @@ const CriptaDiSantaRestituta = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .cripta-di-santa-restituta-text04 {
+          .cripta-di-santa-restituta-text05 {
             font-size: 2.3rem;
             font-family: 'Inria Sans';
             padding-top: var(--dl-space-space-threeunits);
@@ -343,7 +358,7 @@ const CriptaDiSantaRestituta = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .cripta-di-santa-restituta-text07 {
+          .cripta-di-santa-restituta-text08 {
             margin-top: 0px;
           }
           .cripta-di-santa-restituta-section-perch1 {
@@ -369,7 +384,7 @@ const CriptaDiSantaRestituta = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .cripta-di-santa-restituta-container09 {
+          .cripta-di-santa-restituta-container11 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -377,7 +392,7 @@ const CriptaDiSantaRestituta = (props) => {
             align-items: center;
             justify-content: center;
           }
-          .cripta-di-santa-restituta-container10 {
+          .cripta-di-santa-restituta-container12 {
             flex: 0 0 auto;
             width: 100%;
             height: auto;
@@ -385,7 +400,7 @@ const CriptaDiSantaRestituta = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .cripta-di-santa-restituta-text08 {
+          .cripta-di-santa-restituta-text09 {
             font-size: 2.3rem;
             font-family: 'Inria Sans';
             padding-top: 0px;
@@ -402,7 +417,7 @@ const CriptaDiSantaRestituta = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .cripta-di-santa-restituta-container12 {
+          .cripta-di-santa-restituta-container14 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
@@ -410,7 +425,7 @@ const CriptaDiSantaRestituta = (props) => {
             align-items: center;
             justify-content: center;
           }
-          .cripta-di-santa-restituta-container13 {
+          .cripta-di-santa-restituta-container15 {
             flex: 0 0 auto;
             width: 100%;
             height: auto;
@@ -418,29 +433,12 @@ const CriptaDiSantaRestituta = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .cripta-di-santa-restituta-text11 {
+          .cripta-di-santa-restituta-text12 {
             font-size: 2.3rem;
             font-family: 'Inria Sans';
             padding-top: 0px;
             margin-bottom: var(--dl-space-space-oneandhalfunits);
             padding-bottom: 0px;
-          }
-          .cripta-di-santa-restituta-container15 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: flex-start;
-          }
-          .cripta-di-santa-restituta-container16 {
-            flex: 0 0 auto;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            padding: var(--dl-space-space-fourunits);
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
           }
           @media (max-width: 479px) {
             .cripta-di-santa-restituta-section-header {
@@ -467,11 +465,11 @@ const CriptaDiSantaRestituta = (props) => {
               flex-direction: column;
               justify-content: center;
             }
-            .cripta-di-santa-restituta-text {
+            .cripta-di-santa-restituta-text01 {
               font-size: 2rem;
               text-align: center;
             }
-            .cripta-di-santa-restituta-text01 {
+            .cripta-di-santa-restituta-text02 {
               font-size: 0.9rem;
               margin-top: var(--dl-space-space-oneandhalfunits);
             }
@@ -484,22 +482,22 @@ const CriptaDiSantaRestituta = (props) => {
               flex: 1;
               flex-direction: column;
             }
-            .cripta-di-santa-restituta-container04 {
+            .cripta-di-santa-restituta-container06 {
               padding-top: 0px;
               padding-bottom: 0px;
             }
-            .cripta-di-santa-restituta-container05 {
+            .cripta-di-santa-restituta-container07 {
               flex: 1;
               width: 100%;
               height: auto;
             }
-            .cripta-di-santa-restituta-container06 {
+            .cripta-di-santa-restituta-container08 {
               margin-top: 0px;
             }
-            .cripta-di-santa-restituta-container07 {
+            .cripta-di-santa-restituta-container09 {
               padding: var(--dl-space-space-oneandhalfunits);
             }
-            .cripta-di-santa-restituta-container08 {
+            .cripta-di-santa-restituta-container10 {
               flex: 1;
               width: 100%;
             }
@@ -514,11 +512,11 @@ const CriptaDiSantaRestituta = (props) => {
               flex-direction: column;
               justify-content: center;
             }
-            .cripta-di-santa-restituta-text04 {
+            .cripta-di-santa-restituta-text05 {
               text-align: center;
               padding-top: var(--dl-space-space-unit);
             }
-            .cripta-di-santa-restituta-text05 {
+            .cripta-di-santa-restituta-text06 {
               text-align: center;
             }
             .cripta-di-santa-restituta-region-right1 {
@@ -527,7 +525,7 @@ const CriptaDiSantaRestituta = (props) => {
               align-items: center;
               justify-content: flex-start;
             }
-            .cripta-di-santa-restituta-text07 {
+            .cripta-di-santa-restituta-text08 {
               margin-top: var(--dl-space-space-oneandhalfunits);
             }
             .cripta-di-santa-restituta-section-perch1 {
@@ -541,10 +539,10 @@ const CriptaDiSantaRestituta = (props) => {
               flex-direction: column;
               justify-content: center;
             }
-            .cripta-di-santa-restituta-text08 {
+            .cripta-di-santa-restituta-text09 {
               text-align: center;
             }
-            .cripta-di-santa-restituta-text09 {
+            .cripta-di-santa-restituta-text10 {
               text-align: center;
             }
             .cripta-di-santa-restituta-region-right2 {
@@ -552,10 +550,10 @@ const CriptaDiSantaRestituta = (props) => {
               align-items: center;
               justify-content: flex-start;
             }
-            .cripta-di-santa-restituta-text11 {
+            .cripta-di-santa-restituta-text12 {
               text-align: center;
             }
-            .cripta-di-santa-restituta-text12 {
+            .cripta-di-santa-restituta-text13 {
               text-align: center;
             }
           }
@@ -569,17 +567,26 @@ export default CriptaDiSantaRestituta
 
 export async function getStaticProps(context) {
   try {
-    const contextU4as6iProp = await getEntityByAttribute9({
+    const contextU4as6iProp = await getEntityByAttribute10({
       ...context?.params,
       projectId: 'e37dde76-3990-46c8-ae2d-e8de13e0247e',
       query:
-        'query Monumenti($value:ID!){Monumenti(id:$value){_meta{createdAt updatedAt id}name pattern{__typename _meta{createdAt updatedAt id}description height id src title width}posiiton headerColor noteStoriche primaryImage{__typename _meta{createdAt updatedAt id}description height id src title width}visitingHours{json connections{__typename  }}orarioInvernale{json connections{__typename  }}percheVisitarlo noteStoricheImage{__typename _meta{createdAt updatedAt id}description height id src title width}descriptiveSummary}}',
+        'query Monumenti($value:ID!){Monumenti(id:$value){_meta{createdAt updatedAt id}headerColor locationIcon{__typename _meta{createdAt updatedAt id}description height id src title width}locationName primaryImage{__typename _meta{createdAt updatedAt id}description height id src title width}locationAddress percheVisitarlo briefDescription noteStoricheImage{__typename _meta{createdAt updatedAt id}description height id src title width}descriptiveSummary visitingHoursSummer{json connections{__typename  }}visitingHoursWinter{json connections{__typename  }}}}',
       attribute: 'id',
       id: '7b9f7924-0bb9-46dc-81db-6babd9c3c5c2',
+    })
+    const context75gp0sProp = await getEntityByAttribute7({
+      ...context?.params,
+      projectId: 'e37dde76-3990-46c8-ae2d-e8de13e0247e',
+      query:
+        'query Monumenti($value:ID!){Monumenti(id:$value){_meta{createdAt updatedAt id}headerColor locationIcon{__typename _meta{createdAt updatedAt id}description height id src title width}locationName primaryImage{__typename _meta{createdAt updatedAt id}description height id src title width}locationAddress percheVisitarlo briefDescription noteStoricheImage{__typename _meta{createdAt updatedAt id}description height id src title width}descriptiveSummary visitingHoursSummer{json connections{__typename  }}visitingHoursWinter{json connections{__typename  }}}}',
+      attribute: 'id',
+      id: '414395c3-82af-4390-a5b9-724a5f992773',
     })
     return {
       props: {
         contextU4as6iProp: contextU4as6iProp?.data?.[0],
+        context75gp0sProp: context75gp0sProp?.data?.[0],
       },
       revalidate: 60,
     }
