@@ -12,7 +12,7 @@ const Navbar = (props) => {
         data-role="Header"
         className={`navbar-header ${props.rootClassName} `}
       >
-        <div className="navbar-container">
+        <div className="navbar-container container-centered-correct">
           <div className="navbar-container1">
             <div className="navbar-logo">
               <Link href="/">
@@ -70,7 +70,6 @@ const Navbar = (props) => {
             width: 100%;
             display: flex;
             position: relative;
-            max-width: var(--dl-size-size-maxwidth);
             align-items: center;
             padding-top: var(--dl-space-space-twounits);
             padding-left: var(--dl-space-space-threeunits);
