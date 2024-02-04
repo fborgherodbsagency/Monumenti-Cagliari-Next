@@ -190,7 +190,6 @@ const Navbar = (props) => {
               width: auto;
             }
             .navbar-mobile-menu {
-              display: flex;
               padding: 16px;
             }
             .navbar-image1 {
