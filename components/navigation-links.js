@@ -10,9 +10,14 @@ const NavigationLinks = (props) => {
         <Link href="/">
           <a className="navigation-links-link">{props.text}</a>
         </Link>
-        <Link href="/">
-          <a className="navigation-links-link1">{props.text1}</a>
-        </Link>
+        <a
+          href="https://storage.googleapis.com/playground-bucket-v2.teleporthq.io/37506064-38d0-4aa2-8055-cf3f3b245ec0/cd622a60-5de2-4a47-a7c0-0aea22407626"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="navigation-links-link1"
+        >
+          {props.text1}
+        </a>
         <a href="#footer" className="navigation-links-link2">
           {props.text11}
         </a>
