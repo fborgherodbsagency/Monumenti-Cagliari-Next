@@ -190,7 +190,11 @@ const Navbar = (props) => {
               width: auto;
             }
             .navbar-mobile-menu {
+              display: flex;
               padding: 16px;
+            }
+            .navbar-image1 {
+              height: 60px;
             }
           }
         `}
@@ -200,9 +204,9 @@ const Navbar = (props) => {
 }
 
 Navbar.defaultProps = {
-  imageSrc: '/logomca-positive-200h.png',
+  imageSrc: '/logomca-positive-1500h.png',
   imageAlt1: 'image',
-  imageSrc1: 'https://presentation-website-assets.teleporthq.io/logos/logo.png',
+  imageSrc1: '/logomca-positive-1500h.png',
   textTop1: 'Vuoi saperne di più',
   imageAlt: 'logo',
   textTop2: 'Chi siamo',
