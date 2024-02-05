@@ -28,16 +28,30 @@ const Footer = (props) => {
           </div>
           <div className="footer-icon-group">
             <div className="footer-container3">
-              <img
-                alt={props.imageAlt5}
-                src={props.imageSrc5}
-                className="footer-image3"
-              />
-              <img
-                alt={props.imageAlt51}
-                src={props.imageSrc51}
-                className="footer-image4"
-              />
+              <a
+                href="https://www.facebook.com/monumentidicagliaripaginaufficiale"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="footer-link"
+              >
+                <img
+                  alt={props.imageAlt5}
+                  src={props.imageSrc5}
+                  className="footer-image3"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/monumentidicagliari?igsh=MXYyaHc0eDlyNm9wcw=="
+                target="_blank"
+                rel="noreferrer noopener"
+                className="footer-link1"
+              >
+                <img
+                  alt={props.imageAlt51}
+                  src={props.imageSrc51}
+                  className="footer-image4"
+                />
+              </a>
             </div>
             <div className="footer-container4">
               <div className="footer-container5">
@@ -115,14 +129,22 @@ const Footer = (props) => {
             align-items: flex-start;
             justify-content: flex-end;
           }
+          .footer-link {
+            display: contents;
+          }
           .footer-image3 {
             width: var(--dl-size-size-xsmall);
             object-fit: cover;
             margin-right: var(--dl-space-space-oneandhalfunits);
+            text-decoration: none;
+          }
+          .footer-link1 {
+            display: contents;
           }
           .footer-image4 {
             width: var(--dl-size-size-xsmall);
             object-fit: cover;
+            text-decoration: none;
           }
           .footer-container4 {
             flex: 0 0 auto;
