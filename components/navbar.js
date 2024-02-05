@@ -182,7 +182,7 @@ const Navbar = (props) => {
               justify-content: center;
             }
             .navbar-mobile-menu {
-              display: flex;
+              display: none;
             }
           }
           @media (max-width: 479px) {
@@ -193,7 +193,7 @@ const Navbar = (props) => {
               width: auto;
             }
             .navbar-mobile-menu {
-              display: flex;
+              display: none;
               padding: 16px;
             }
             .navbar-image1 {
