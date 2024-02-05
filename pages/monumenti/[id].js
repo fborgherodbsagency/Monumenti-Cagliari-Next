@@ -6,6 +6,7 @@ import {
   Repeater,
   CaisyDocumentLink,
 } from '@teleporthq/react-components'
+import Script from 'dangerous-html/react'
 import { RichTextRenderer } from '@caisy/rich-text-react-renderer'
 import PropTypes from 'prop-types'
 import {
@@ -29,11 +30,36 @@ const Monumenti = (props) => {
           renderSuccess={(MonumentiEntity) => (
             <>
               <div className="monumenti-container01">
-                <div className="location-detail-header">
+                <Script
+                  html={`<script>
+        // Ottieni il valore dell'h1 con id "title-location"
+        var locationName = document.getElementById('title-location').innerText.trim();
+
+        console.log(locationName)
+        // Lista di corrispondenze tra nome della location e codice colore
+        var locationColorMap = {
+            "La Torre dell’Elefante": "#78b9e5",  // Sostituisci con i tuoi dati
+            "L'Anfiteatro Romano": "#b4ccac", 
+            "Cripta di Santa Restituta": "#cdc7d1",
+            "Passeggiata Coperta e Galleria dello Sperone":"#d7c16d",
+            "La Grotta della Vipera": "#79d19c" // Sostituisci con i tuoi dati
+            // Aggiungi altre corrispondenze se necessario
+        };
+
+        // Ottieni il codice colore dalla mappa
+        var backgroundColor = locationColorMap[locationName];
+
+        // Se esiste una corrispondenza, assegna il colore di sfondo al div
+        if (backgroundColor) {
+            document.getElementById('location-header').style.backgroundColor = backgroundColor;
+        }
+    </script>`}
+                ></Script>
+                <div id="location-header" className="location-detail-header">
                   <div className="monumenti-container-centered">
                     <div className="monumenti-block-region">
                       <div className="monumenti-region-left">
-                        <h1 className="monumenti-text">
+                        <h1 id="title-location" className="monumenti-text">
                           {MonumentiEntity?.locationName}
                         </h1>
                         <p className="monumenti-text01 peragraph-detail">
@@ -370,7 +396,7 @@ const Monumenti = (props) => {
             flex: 0 0 auto;
             width: 100%;
             height: 35vh;
-            display: flex;
+            display: none;
             overflow: hidden;
             align-items: flex-start;
             justify-content: center;

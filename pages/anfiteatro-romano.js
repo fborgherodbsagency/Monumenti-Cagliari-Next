@@ -314,7 +314,7 @@ const AnfiteatroRomano = (props) => {
             flex: 0 0 auto;
             width: 100%;
             height: 35vh;
-            display: flex;
+            display: none;
             overflow: hidden;
             align-items: flex-start;
             justify-content: center;

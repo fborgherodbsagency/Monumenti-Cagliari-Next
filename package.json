@@ -18,6 +18,7 @@
     "@teleporthq/react-components": "latest",
     "@teleporthq/cms-mappers": "latest",
     "@caisy/rich-text-react-renderer": "0.7.3",
+    "dangerous-html": "0.1.13",
     "prop-types": "15.7.2"
   },
   "engines": {

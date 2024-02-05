@@ -404,7 +404,7 @@ const Home = (props) => {
             text-decoration: none;
           }
           .home-container18 {
-            background-color: #2fa3a3;
+            background-color: #79d19c;
           }
           .home-container19 {
             display: flex;
